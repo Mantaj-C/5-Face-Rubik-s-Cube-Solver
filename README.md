@@ -1,6 +1,9 @@
 # 🤖 Rubik’s Cube Solver – 5-Face Camera System
+### 🔗 LinkedIn Post  
+I also shared this project on LinkedIn — read the full post here:  
+👉 <[LinkedIn](https://www.linkedin.com/posts/mantaj-chauhan-951b401b5_just-completed-my-custom-5-face-rubik-activity-7408614489727696896-skUq?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADIuHU0Bw7hjjBi1r9QsJ84nt98T_yjn1Ws)>
 
-This project is a fully custom **5-face Rubik’s Cube solver** built from scratch to improve my skills in:
+This project is a custom Rubik’s Cube solving machine, fully designed from scratch on the hardware, control logic, UI, and computer vision side, and powered by the well-known [rob-twophase](https://github.com/efrantar/rob-twophase) solving algorithm to improve my skills in:
 
 - C++ software architecture  
 - OpenCV computer vision  
