@@ -32,12 +32,13 @@ https://youtu.be/Gd5gCoYmTEs
 ## 📂 Project Structure
 RubiksCubeSolver/
 │
-├── PCB Files/              # PCB schematics & board design
-├── Solidworks Files/       # Full CAD of the solver mechanism
+├── PCB Files/            # Custom PCB schematics + motor driver board
+│
+├── Solidworks Files/     # Full CAD of the solver mechanism
 │
 └── Src/
-├── Client/             # Raspberry Pi: motors + camera
-└── Server/             # Mac: solver + UI + 3D viewer
+    ├── Client/           # Raspberry Pi: motor control + camera scanning
+    └── Server/           # Mac: solver engine, UI, 3D viewer (SFML + OpenGL)
 
 ---
 
@@ -45,7 +46,7 @@ RubiksCubeSolver/
 
 ## 💻 Server (Mac)
 Responsible for:
-- Running the **rob-twophase** solver  
+- Running the [**rob-twophase**](https://github.com/efrantar/rob-twophase) solver  
 - Managing the **SFML + OpenGL** graphical control panel  
 - Rendering a **3D cube** with animations  
 - Sending commands to the Pi  
@@ -84,16 +85,16 @@ Technologies used:
 The architecture uses a **simple text-based custom protocol** over TCP sockets.
 
 ## Server → Client Commands
-B M 0 -1 90;     # Rotate face 0, CCW, 90°
-B F 1000;        # Set step frequency
-B S;             # Start sync (camera scan)
-B T;             # Start solve timer
-Q                # Quit
+B M <face> <direction> <angle>;    # Rotate face
+B F <freq>;                        # Set stepper frequency
+B S;                               # Start sync (camera scan)
+B T;                               # Start solve timer
+Q                                  # Quit
 
 ## Client → Server Responses
-T 1523.4         # Solve time (ms)
-S UUU…BBB      # 54-char facelet string
-DONE             # No special condition
+T <time_ms>          # Solve time in milliseconds
+S <54-char-facelet>  # Camera-detected cube state
+DONE                 # No special condition
 
 ---
 
