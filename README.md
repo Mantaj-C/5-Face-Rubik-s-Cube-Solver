@@ -5,7 +5,7 @@ This project is a fully custom **5-face Rubik’s Cube solver** built from scrat
 - C++ software architecture  
 - OpenCV computer vision  
 - SolidWorks mechanical design  
-- PCB design  
+- PCB design in Altium  
 - Stepper motor control  
 - TCP/IP networking  
 
@@ -120,7 +120,7 @@ DONE                 # No special condition
 - PWM + GPIO control via pigpio  
 
 ### 🧠 Solving Logic
-- Uses **rob-twophase** solver  
+- Uses [**rob-twophase**](https://github.com/efrantar/rob-twophase) solver  
 - Converts solver moves → motor moves  
 - Supports patterns, shuffles, syncing  
 
@@ -134,7 +134,7 @@ DONE                 # No special condition
 
 ### 🛠 Mechanical + PCB Design
 - Entirely designed in SolidWorks  
-- Custom PCB for stepper drivers  
+- Custom PCB designed in Altium for stepper drivers  
 - Gear system + mounting structure  
 - Designed for stability, alignment, and lighting  
 
@@ -151,7 +151,7 @@ This project helped me grow in:
 - TCP/IP networking and protocol design  
 - SFML & OpenGL graphics  
 - SolidWorks mechanical design  
-- PCB layout and driver electronics  
+- Altium PCB layout and driver electronics  
 - Full system debugging across multiple platforms  
 
 This was one of my most complete end-to-end engineering builds, combining software, mechanical, electrical, and computer vision into a single cohesive system.
