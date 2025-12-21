@@ -30,6 +30,7 @@ https://youtu.be/Gd5gCoYmTEs
 ---
 
 ## 📂 Project Structure
+```text
 RubiksCubeSolver/
 │
 ├── PCB Files/            # Custom PCB schematics + motor driver board
@@ -150,3 +151,7 @@ This project helped me grow in:
 - Full system debugging across multiple platforms  
 
 This was one of my most complete end-to-end engineering builds, combining software, mechanical, electrical, and computer vision into a single cohesive system.
+
+The solver is powered by the [rob-twophase] library.
+
+[rob-twophase]: https://github.com/efrantar/rob-twophase
