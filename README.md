@@ -40,6 +40,7 @@ RubiksCubeSolver/
 └── Src/
     ├── Client/           # Raspberry Pi: motor control + camera scanning
     └── Server/           # Mac: solver engine, UI, 3D viewer (SFML + OpenGL)
+```
 
 ---
 
@@ -86,16 +87,19 @@ Technologies used:
 The architecture uses a **simple text-based custom protocol** over TCP sockets.
 
 ## Server → Client Commands
+```text
 B M <face> <direction> <angle>;    # Rotate face
 B F <freq>;                        # Set stepper frequency
 B S;                               # Start sync (camera scan)
 B T;                               # Start solve timer
 Q                                  # Quit
-
+```
 ## Client → Server Responses
+```text
 T <time_ms>          # Solve time in milliseconds
 S <54-char-facelet>  # Camera-detected cube state
 DONE                 # No special condition
+```
 
 ---
 
